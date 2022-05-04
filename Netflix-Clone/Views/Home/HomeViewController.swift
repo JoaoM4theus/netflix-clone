@@ -10,7 +10,7 @@ import UIKit
 class HomeViewController: UIViewController {
     
     private let homeFeedTable: UITableView = {
-         let table = UITableView()
+        let table = UITableView(frame: .zero, style: .grouped)
         table.register(CollectionViewTableViewCell.self,
                        forCellReuseIdentifier: CollectionViewTableViewCell.identifier)
         return table
@@ -34,6 +34,10 @@ class HomeViewController: UIViewController {
 // MARK: UITableViewDelegate, UITableViewDataSource
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
         return 20
     }
     
