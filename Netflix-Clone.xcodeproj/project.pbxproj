@@ -65,7 +65,6 @@
 				DC44D4DF28119877002A847E /* Views */,
 				DC2EBCAE2811942D009E8123 /* AppDelegate.swift */,
 				DC2EBCB02811942D009E8123 /* SceneDelegate.swift */,
-				DC44D4DD2811975B002A847E /* MainTabBarViewController.swift */,
 				DC2EBCB728119430009E8123 /* Assets.xcassets */,
 				DC2EBCB928119430009E8123 /* LaunchScreen.storyboard */,
 				DC2EBCBC28119430009E8123 /* Info.plist */,
@@ -76,12 +75,21 @@
 		DC44D4DF28119877002A847E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				DCD88E0928233B840045A235 /* MainTabBar */,
 				DC44D4E0281198B8002A847E /* HomeViewController.swift */,
 				DC44D4E2281198E5002A847E /* UpcomingViewController.swift */,
 				DC44D4E4281198FD002A847E /* SearchViewController.swift */,
 				DC44D4E628119916002A847E /* DownloadViewController.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		DCD88E0928233B840045A235 /* MainTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				DC44D4DD2811975B002A847E /* MainTabBarViewController.swift */,
+			);
+			path = MainTabBar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
