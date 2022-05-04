@@ -16,6 +16,7 @@
 		DC44D4E3281198E5002A847E /* UpcomingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC44D4E2281198E5002A847E /* UpcomingViewController.swift */; };
 		DC44D4E5281198FD002A847E /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC44D4E4281198FD002A847E /* SearchViewController.swift */; };
 		DC44D4E728119916002A847E /* DownloadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC44D4E628119916002A847E /* DownloadViewController.swift */; };
+		DCD88E112823416E0045A235 /* CollectionViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD88E102823416E0045A235 /* CollectionViewTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		DC44D4E2281198E5002A847E /* UpcomingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingViewController.swift; sourceTree = "<group>"; };
 		DC44D4E4281198FD002A847E /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		DC44D4E628119916002A847E /* DownloadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadViewController.swift; sourceTree = "<group>"; };
+		DCD88E102823416E0045A235 /* CollectionViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,10 @@
 		DC2EBCAD2811942D009E8123 /* Netflix-Clone */ = {
 			isa = PBXGroup;
 			children = (
+				DCD88E0D282341100045A235 /* Managers */,
+				DCD88E0C282341010045A235 /* Resources */,
+				DCD88E0B282340DE0045A235 /* Models */,
+				DCD88E0A282340D30045A235 /* ViewModels */,
 				DC44D4DF28119877002A847E /* Views */,
 				DC2EBCAE2811942D009E8123 /* AppDelegate.swift */,
 				DC2EBCB02811942D009E8123 /* SceneDelegate.swift */,
@@ -75,8 +81,8 @@
 		DC44D4DF28119877002A847E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				DCD88E0E282341340045A235 /* Home */,
 				DCD88E0928233B840045A235 /* MainTabBar */,
-				DC44D4E0281198B8002A847E /* HomeViewController.swift */,
 				DC44D4E2281198E5002A847E /* UpcomingViewController.swift */,
 				DC44D4E4281198FD002A847E /* SearchViewController.swift */,
 				DC44D4E628119916002A847E /* DownloadViewController.swift */,
@@ -90,6 +96,51 @@
 				DC44D4DD2811975B002A847E /* MainTabBarViewController.swift */,
 			);
 			path = MainTabBar;
+			sourceTree = "<group>";
+		};
+		DCD88E0A282340D30045A235 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		DCD88E0B282340DE0045A235 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		DCD88E0C282341010045A235 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		DCD88E0D282341100045A235 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		DCD88E0E282341340045A235 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				DCD88E0F2823413C0045A235 /* Cell */,
+				DC44D4E0281198B8002A847E /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		DCD88E0F2823413C0045A235 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				DCD88E102823416E0045A235 /* CollectionViewTableViewCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -164,6 +215,7 @@
 			files = (
 				DC44D4E5281198FD002A847E /* SearchViewController.swift in Sources */,
 				DC44D4DE2811975B002A847E /* MainTabBarViewController.swift in Sources */,
+				DCD88E112823416E0045A235 /* CollectionViewTableViewCell.swift in Sources */,
 				DC2EBCAF2811942D009E8123 /* AppDelegate.swift in Sources */,
 				DC44D4E728119916002A847E /* DownloadViewController.swift in Sources */,
 				DC2EBCB12811942D009E8123 /* SceneDelegate.swift in Sources */,
