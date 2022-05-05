@@ -9,6 +9,15 @@ import UIKit
 
 class HomeHeaderView: UIView {
 
+    private let playButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("Play", for: .normal)
+        button.layer.borderColor = UIColor.systemBackground.cgColor
+        button.layer.borderWidth = 1
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+    }()
+    
     private let headerImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFill
@@ -20,6 +29,7 @@ class HomeHeaderView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         addSubview(headerImageView)
+        addSubview(playButton)
         addGradient()
     }
     
