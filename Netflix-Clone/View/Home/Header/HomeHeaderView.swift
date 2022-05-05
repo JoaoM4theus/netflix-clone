@@ -9,6 +9,15 @@ import UIKit
 
 class HomeHeaderView: UIView {
 
+    private let downloadButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("Download", for: .normal)
+        button.layer.borderColor = UIColor.white.cgColor
+        button.layer.borderWidth = 1
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+    }()
+    
     private let playButton: UIButton = {
         let button = UIButton()
         button.setTitle("Play", for: .normal)
@@ -31,6 +40,7 @@ class HomeHeaderView: UIView {
         addSubview(headerImageView)
         addGradient()
         addSubview(playButton)
+        addSubview(downloadButton)
         applyConstraints()
     }
     
@@ -58,7 +68,20 @@ class HomeHeaderView: UIView {
             playButton.widthAnchor.constraint(equalToConstant: 110)
         ]
         
-        NSLayoutConstraint.activate(playButtonConstraints)
+        let downloadConstraints = [
+            downloadButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -90),
+            downloadButton.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -60),
+            downloadButton.widthAnchor.constraint(equalToConstant: 100)
+        ]
+        
+        let allConstraints = [
+            playButtonConstraints,
+            downloadConstraints
+        ]
+        
+        allConstraints.forEach { constraints in
+            NSLayoutConstraint.activate(constraints)
+        }
     }
     
 }
