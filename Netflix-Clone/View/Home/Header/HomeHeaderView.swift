@@ -65,13 +65,13 @@ class HomeHeaderView: UIView {
     
     private func applyConstraints() {
         let playButtonConstraints = [
-            playButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 90),
+            playButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 75),
             playButton.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -60),
             playButton.widthAnchor.constraint(equalToConstant: 110)
         ]
         
         let downloadConstraints = [
-            downloadButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -90),
+            downloadButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -75),
             downloadButton.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -60),
             downloadButton.widthAnchor.constraint(equalToConstant: 110)
         ]
