@@ -31,7 +31,11 @@ class HomeViewController: UIViewController {
         view.addSubview(homeFeedTable)
         homeFeedTable.delegate = self
         homeFeedTable.dataSource = self
-        homeFeedTable.tableHeaderView = UIView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 450))
+        let headeView = HomeHeaderView(frame: CGRect(x: 0,
+                                                     y: 0,
+                                                     width: view.bounds.width,
+                                                     height: 450))
+        homeFeedTable.tableHeaderView = headeView
     }
 
 }
