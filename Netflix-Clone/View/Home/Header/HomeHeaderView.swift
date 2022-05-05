@@ -15,6 +15,7 @@ class HomeHeaderView: UIView {
         button.layer.borderColor = UIColor.white.cgColor
         button.layer.borderWidth = 1
         button.translatesAutoresizingMaskIntoConstraints = false
+        button.layer.cornerRadius = 5
         return button
     }()
     
@@ -24,6 +25,7 @@ class HomeHeaderView: UIView {
         button.layer.borderColor = UIColor.white.cgColor
         button.layer.borderWidth = 1
         button.translatesAutoresizingMaskIntoConstraints = false
+        button.layer.cornerRadius = 5
         return button
     }()
     
@@ -71,7 +73,7 @@ class HomeHeaderView: UIView {
         let downloadConstraints = [
             downloadButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -90),
             downloadButton.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -60),
-            downloadButton.widthAnchor.constraint(equalToConstant: 100)
+            downloadButton.widthAnchor.constraint(equalToConstant: 110)
         ]
         
         let allConstraints = [
