@@ -12,7 +12,7 @@ class HomeHeaderView: UIView {
     private let playButton: UIButton = {
         let button = UIButton()
         button.setTitle("Play", for: .normal)
-        button.layer.borderColor = UIColor.systemBackground.cgColor
+        button.layer.borderColor = UIColor.white.cgColor
         button.layer.borderWidth = 1
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
@@ -29,8 +29,9 @@ class HomeHeaderView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         addSubview(headerImageView)
-        addSubview(playButton)
         addGradient()
+        addSubview(playButton)
+        applyConstraints()
     }
     
     required init?(coder: NSCoder) {
@@ -48,6 +49,16 @@ class HomeHeaderView: UIView {
                                 UIColor.systemBackground.cgColor]
         gradientLayer.frame = bounds
         layer.addSublayer(gradientLayer)
+    }
+    
+    private func applyConstraints() {
+        let playButtonConstraints = [
+            playButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 90),
+            playButton.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -60),
+            playButton.widthAnchor.constraint(equalToConstant: 110)
+        ]
+        
+        NSLayoutConstraint.activate(playButtonConstraints)
     }
     
 }
