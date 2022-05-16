@@ -16,6 +16,7 @@
 		DC44D4E3281198E5002A847E /* UpcomingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC44D4E2281198E5002A847E /* UpcomingViewController.swift */; };
 		DC44D4E5281198FD002A847E /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC44D4E4281198FD002A847E /* SearchViewController.swift */; };
 		DC44D4E728119916002A847E /* DownloadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC44D4E628119916002A847E /* DownloadViewController.swift */; };
+		DC48FD6B28330EEA004B43D0 /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC48FD6A28330EEA004B43D0 /* Box.swift */; };
 		DC68AEDC2824869C006C1527 /* HomeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC68AEDB2824869C006C1527 /* HomeHeaderView.swift */; };
 		DCD88E112823416E0045A235 /* CollectionViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD88E102823416E0045A235 /* CollectionViewTableViewCell.swift */; };
 /* End PBXBuildFile section */
@@ -32,6 +33,7 @@
 		DC44D4E2281198E5002A847E /* UpcomingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingViewController.swift; sourceTree = "<group>"; };
 		DC44D4E4281198FD002A847E /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		DC44D4E628119916002A847E /* DownloadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadViewController.swift; sourceTree = "<group>"; };
+		DC48FD6A28330EEA004B43D0 /* Box.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Box.swift; sourceTree = "<group>"; };
 		DC68AEDB2824869C006C1527 /* HomeHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeaderView.swift; sourceTree = "<group>"; };
 		DCD88E102823416E0045A235 /* CollectionViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -149,6 +151,7 @@
 		DCD88E0C282341010045A235 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				DC48FD6A28330EEA004B43D0 /* Box.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -253,6 +256,7 @@
 				DCD88E112823416E0045A235 /* CollectionViewTableViewCell.swift in Sources */,
 				DC68AEDC2824869C006C1527 /* HomeHeaderView.swift in Sources */,
 				DC2EBCAF2811942D009E8123 /* AppDelegate.swift in Sources */,
+				DC48FD6B28330EEA004B43D0 /* Box.swift in Sources */,
 				DC44D4E728119916002A847E /* DownloadViewController.swift in Sources */,
 				DC2EBCB12811942D009E8123 /* SceneDelegate.swift in Sources */,
 				DC44D4E3281198E5002A847E /* UpcomingViewController.swift in Sources */,
