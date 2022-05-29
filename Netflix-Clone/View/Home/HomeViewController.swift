@@ -9,6 +9,12 @@ import UIKit
 
 class HomeViewController: UIViewController {
     
+    let sectionsTitles: [String] = ["Trending Movies",
+                                    "Popular",
+                                    "Trending Tv",
+                                    "Upcoming Movies",
+                                    "Top rated"]
+    
     private let homeFeedTable: UITableView = {
         let table = UITableView(frame: .zero, style: .grouped)
         table.register(CollectionViewTableViewCell.self,
@@ -19,7 +25,6 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
-        
         configureNavBar()
         setupHomeTableView()
     }
@@ -62,7 +67,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 20
+        return sectionsTitles.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -70,7 +75,6 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
                                                        for: indexPath) as? CollectionViewTableViewCell else {
             return UITableViewCell()
         }
-        
         return cell
     }
     
@@ -82,11 +86,26 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         return 40
     }
     
+    func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        guard let header = view as? UITableViewHeaderFooterView else { return }
+        let headerText = header.textLabel
+        headerText?.font = .systemFont(ofSize: 18, weight: .semibold)
+        headerText?.frame = CGRect(x: header.bounds.origin.x + 20,
+                                         y: header.bounds.origin.y,
+                                         width: 100,
+                                         height: header.bounds.height)
+        headerText?.textColor = .white
+        headerText?.text = headerText?.text?.lowercased().capitalized
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return sectionsTitles[section]
+    }
+    
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let defaultOffset = view.safeAreaInsets.top
         let offset = scrollView.contentOffset.y - defaultOffset
         
         navigationController?.navigationBar.transform = .init(translationX: .zero, y: min(0, -offset))
     }
-    
 }
