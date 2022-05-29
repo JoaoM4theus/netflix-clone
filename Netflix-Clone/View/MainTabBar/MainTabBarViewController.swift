@@ -7,81 +7,51 @@
 
 import UIKit
 
-enum MainTabBarController {
-    case home
-    case upcoming
-    case search
-    case download
+enum ItemsTabBarController {
+    case home(UIViewController, String, String)
+    case upcoming(UIViewController, String, String)
+    case search(UIViewController, String, String)
+    case download(UIViewController, String, String)
     
-    var viewController: UIViewController {
+    var itemTabBar: (viewController: UIViewController,
+                     imageName: String,
+                     title: String) {
         switch self {
-        case .home:
-            return HomeViewController()
-        case .upcoming:
-            return UpcomingViewController()
-        case .search:
-            return SearchViewController()
-        case .download:
-            return DownloadViewController()
-        }
-    }
-    
-    var tabBarImage: String {
-        switch self {
-        case .home:
-            return "house"
-        case .upcoming:
-            return "play.circle"
-        case .search:
-            return "magnifyingglass"
-        case .download:
-            return "arrow.down.to.line"
-        }
-    }
-    
-    var title: String {
-        switch self {
-            
-        case .home:
-            return "House"
-        case .upcoming:
-            return "Coming Soon"
-        case .search:
-            return "Top Search"
-        case .download:
-            return "Downloads"
+        case .home(let viewController, let imageName, let title):
+            return (viewController, imageName, title)
+        case .upcoming(let viewController, let imageName, let title):
+            return (viewController, imageName, title)
+        case .search(let viewController, let imageName, let title):
+            return (viewController, imageName, title)
+        case .download(let viewController, let imageName, let title):
+            return (viewController, imageName, title)
         }
     }
 }
 
 class MainTabBarViewController: UITabBarController {
-    var viewsTabBar: [MainTabBarController]
-    
-    init(viewsTabBar: [MainTabBarController] = [.home, .upcoming, .search, .download]) {
-        self.viewsTabBar = viewsTabBar
-        super.init(nibName: nil, bundle: nil)
-    }
-    
-    required init?(coder: NSCoder) {
-        return nil
-    }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemYellow
         tabBar.tintColor = .label
-        configureTabBar(views: viewsTabBar)
+        configureDefaultTabBar()
     }
     
-    private func configureTabBar(views: [MainTabBarController]) {
+    private func configureDefaultTabBar(_ views: [ItemsTabBarController] = [
+        .home(HomeViewController(), "house", "House"),
+        .upcoming(UpcomingViewController(), "play.circle", "Coming Soon"),
+        .search(SearchViewController(), "magnifyingglass", "Top Search"),
+        .download(DownloadViewController(), "arrow.down.to.line", "Downloads")
+    ]) {
         var viewControllers: [UINavigationController] = []
         views.forEach { view in
-            let navigationController = UINavigationController(rootViewController: view.viewController)
-            navigationController.tabBarItem.image = UIImage(systemName: view.tabBarImage)
-            navigationController.title = view.title
+            let navigationController = UINavigationController(rootViewController: view.itemTabBar.viewController)
+            navigationController.tabBarItem.image = UIImage(systemName: view.itemTabBar.imageName)
+            navigationController.title = view.itemTabBar.title
             viewControllers.append(navigationController)
         }
-
+        
         setViewControllers(viewControllers, animated: true)
     }
 }
