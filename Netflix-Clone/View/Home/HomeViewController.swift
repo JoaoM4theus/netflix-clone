@@ -19,6 +19,8 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
+        
+        configureNavBar()
         setupHomeTableView()
     }
     
@@ -27,7 +29,7 @@ class HomeViewController: UIViewController {
         homeFeedTable.frame = view.bounds
     }
     
-    func setupHomeTableView() {
+    private func setupHomeTableView() {
         view.addSubview(homeFeedTable)
         homeFeedTable.delegate = self
         homeFeedTable.dataSource = self
@@ -36,6 +38,13 @@ class HomeViewController: UIViewController {
                                                      width: view.bounds.width,
                                                      height: 450))
         homeFeedTable.tableHeaderView = headeView
+    }
+    
+    private func configureNavBar() {
+        var image = UIImage(named: "netflixLogo")
+        image = image?.withRenderingMode(.alwaysOriginal)
+
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: image, style: .plain, target: self, action: nil)
     }
 
 }
