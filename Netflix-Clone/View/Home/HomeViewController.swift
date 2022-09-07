@@ -75,6 +75,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
                                                        for: indexPath) as? CollectionViewTableViewCell else {
             return UITableViewCell()
         }
+        
         return cell
     }
     
