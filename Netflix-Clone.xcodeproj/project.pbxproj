@@ -20,6 +20,7 @@
 		DC68AEDC2824869C006C1527 /* HomeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC68AEDB2824869C006C1527 /* HomeHeaderView.swift */; };
 		DCD88E112823416E0045A235 /* CollectionViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD88E102823416E0045A235 /* CollectionViewTableViewCell.swift */; };
 		DCE82AD228CAB40B009D1395 /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE82AD128CAB40B009D1395 /* APICaller.swift */; };
+		DCE82AD428CABB13009D1395 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE82AD328CABB13009D1395 /* Movie.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		DC68AEDB2824869C006C1527 /* HomeHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeaderView.swift; sourceTree = "<group>"; };
 		DCD88E102823416E0045A235 /* CollectionViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewTableViewCell.swift; sourceTree = "<group>"; };
 		DCE82AD128CAB40B009D1395 /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
+		DCE82AD328CABB13009D1395 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +148,7 @@
 		DCD88E0B282340DE0045A235 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				DCE82AD328CABB13009D1395 /* Movie.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -256,6 +259,7 @@
 			files = (
 				DC44D4E5281198FD002A847E /* SearchViewController.swift in Sources */,
 				DC44D4DE2811975B002A847E /* MainTabBarViewController.swift in Sources */,
+				DCE82AD428CABB13009D1395 /* Movie.swift in Sources */,
 				DCD88E112823416E0045A235 /* CollectionViewTableViewCell.swift in Sources */,
 				DC68AEDC2824869C006C1527 /* HomeHeaderView.swift in Sources */,
 				DC2EBCAF2811942D009E8123 /* AppDelegate.swift in Sources */,
