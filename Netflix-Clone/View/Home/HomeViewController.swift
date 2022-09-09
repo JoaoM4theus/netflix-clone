@@ -27,11 +27,18 @@ class HomeViewController: UIViewController {
         view.backgroundColor = .systemBackground
         configureNavBar()
         setupHomeTableView()
+        trendingMovies()
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         homeFeedTable.frame = view.bounds
+    }
+    
+    private func trendingMovies() {
+        APICaller.shared.trendingMovies { _ in
+            
+        }
     }
     
     private func setupHomeTableView() {

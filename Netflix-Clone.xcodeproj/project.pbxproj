@@ -19,6 +19,7 @@
 		DC48FD6B28330EEA004B43D0 /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC48FD6A28330EEA004B43D0 /* Box.swift */; };
 		DC68AEDC2824869C006C1527 /* HomeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC68AEDB2824869C006C1527 /* HomeHeaderView.swift */; };
 		DCD88E112823416E0045A235 /* CollectionViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD88E102823416E0045A235 /* CollectionViewTableViewCell.swift */; };
+		DCE82AD228CAB40B009D1395 /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE82AD128CAB40B009D1395 /* APICaller.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		DC48FD6A28330EEA004B43D0 /* Box.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Box.swift; sourceTree = "<group>"; };
 		DC68AEDB2824869C006C1527 /* HomeHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeaderView.swift; sourceTree = "<group>"; };
 		DCD88E102823416E0045A235 /* CollectionViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewTableViewCell.swift; sourceTree = "<group>"; };
+		DCE82AD128CAB40B009D1395 /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +161,7 @@
 		DCD88E0D282341100045A235 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				DCE82AD128CAB40B009D1395 /* APICaller.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 				DC48FD6B28330EEA004B43D0 /* Box.swift in Sources */,
 				DC44D4E728119916002A847E /* DownloadViewController.swift in Sources */,
 				DC2EBCB12811942D009E8123 /* SceneDelegate.swift in Sources */,
+				DCE82AD228CAB40B009D1395 /* APICaller.swift in Sources */,
 				DC44D4E3281198E5002A847E /* UpcomingViewController.swift in Sources */,
 				DC44D4E1281198B8002A847E /* HomeViewController.swift in Sources */,
 			);
