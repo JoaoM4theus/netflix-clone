@@ -7,16 +7,13 @@
 
 import Foundation
 
-enum Constants: String {
-    case apiKey = "?api_key=eca46b71e0db1ad54a0261f6783df094"
-    case language = "&language=en-US&"
-    case page = "&page=1"
-    case baseURL = "https://api.themoviedb.org/3"
-    case endpointTrendingMovie = "/trending/movie/day"
-    case endpointTrendingTv = "/trending/tv/day"
-    case endpointUpcoming = "/movie/upcoming"
-    case endpointPopular = "/movie/popular"
-    case endpointTopRated = "/movie/top_rated"
+struct Constants {
+    static let apiKey = ""
+    static let endpointTrendingMovie = "/trending/movie/day"
+    static let endpointTrendingTv = "/trending/tv/day"
+    static let endpointUpcoming = "/movie/upcoming"
+    static let endpointPopular = "/movie/popular"
+    static let endpointTopRated = "/movie/top_rated"
 }
 
 enum APIError: Error {
@@ -27,8 +24,21 @@ class APICaller {
 
     static let shared = APICaller()
     
-    func fetchMovie(endpointURL: Constants, completion: @escaping (Result<[Movie], Error>) -> Void) {
-        guard let url = URL(string: "\(Constants.baseURL.rawValue)\(endpointURL.rawValue)\(Constants.apiKey.rawValue)")
+    func fetchMovie(endpointURL: String,
+                    hasLaguange: Bool = false,
+                    hasPage: Bool = false,
+                    completion: @escaping (Result<[Movie], Error>) -> Void) {
+        
+        var urlString = "https://api.themoviedb.org/3\(endpointURL)\(Constants.apiKey)"
+        
+        if hasLaguange {
+            urlString += "&language=en-US"
+        }
+        if hasPage {
+            urlString += "&page=1"
+        }
+        
+        guard let url = URL(string: urlString)
         else {
             return
         }
