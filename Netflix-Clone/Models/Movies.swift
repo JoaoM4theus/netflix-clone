@@ -7,6 +7,10 @@
 
 import Foundation
 
+struct Movies: Decodable {
+    let results: [Movie]
+}
+
 struct Movie: Decodable {
     let adult: Bool?
     let backdropPath: String?
@@ -43,25 +47,3 @@ struct Movie: Decodable {
         case video
     }
 }
-
-/*
- adult = 0;
- "backdrop_path" = "/jsoz1HlxczSuTx0mDl2h0lxy36l.jpg";
- "genre_ids" =             (
-     28,
-     12,
-     14
- );
- id = 616037;
- "media_type" = movie;
- "original_language" = en;
- "original_title" = "Thor: Love and Thunder";
- overview = "After his retirement is interrupted by Gorr the God Butcher, a galactic killer who seeks the extinction of the gods, Thor Odinson enlists the help of King Valkyrie, Korg, and ex-girlfriend Jane Foster, who now wields Mjolnir as the Mighty Thor. Together they embark upon a harrowing cosmic adventure to uncover the mystery of the God Butcher\U2019s vengeance and stop him before it\U2019s too late.";
- popularity = "4237.659";
- "poster_path" = "/pIkRyD18kl4FhoCNQuWxWu5cBLM.jpg";
- "release_date" = "2022-07-06";
- title = "Thor: Love and Thunder";
- video = 0;
- "vote_average" = "6.803";
- "vote_count" = 2489;
- */

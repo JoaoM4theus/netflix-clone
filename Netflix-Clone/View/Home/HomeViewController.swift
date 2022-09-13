@@ -27,7 +27,7 @@ class HomeViewController: UIViewController {
         view.backgroundColor = .systemBackground
         configureNavBar()
         setupHomeTableView()
-        trendingTvs()
+        fetchMovies()
     }
     
     override func viewDidLayoutSubviews() {
@@ -35,15 +35,9 @@ class HomeViewController: UIViewController {
         homeFeedTable.frame = view.bounds
     }
     
-    private func trendingMovies() {
-        APICaller.shared.trendingMovies { trending in
-            print(trending)
-        }
-    }
-    
-    private func trendingTvs() {
-        APICaller.shared.trendingMovies { trending in
-            print(trending)
+    private func fetchMovies() {
+        APICaller.shared.fetchMovie(endpointURL: Constants.endpointTrendingMovie) { result in
+            print(result)
         }
     }
     

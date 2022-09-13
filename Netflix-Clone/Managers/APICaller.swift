@@ -7,11 +7,16 @@
 
 import Foundation
 
-struct Constants {
-    static let apiKey = ""
-    static let baseURL = "https://api.themoviedb.org/"
-    static let endpointTrendingMovie = "/3/trending/movie/day"
-    static let endpointTrendingTv = "/3/trending/tv/day"
+enum Constants: String {
+    case apiKey = "?api_key=eca46b71e0db1ad54a0261f6783df094"
+    case language = "&language=en-US&"
+    case page = "&page=1"
+    case baseURL = "https://api.themoviedb.org/3"
+    case endpointTrendingMovie = "/trending/movie/day"
+    case endpointTrendingTv = "/trending/tv/day"
+    case endpointUpcoming = "/movie/upcoming"
+    case endpointPopular = "/movie/popular"
+    case endpointTopRated = "/movie/top_rated"
 }
 
 enum APIError: Error {
@@ -22,11 +27,13 @@ class APICaller {
 
     static let shared = APICaller()
     
-    func trendingMovies(completion: @escaping (Result<[Movie], Error>) -> Void) {
+    func fetchMovie(endpointURL: Constants, completion: @escaping (Result<[Movie], Error>) -> Void) {
+        guard let url = URL(string: "\(Constants.baseURL.rawValue)\(endpointURL.rawValue)\(Constants.apiKey.rawValue)")
+        else {
+            return
+        }
         
-        guard let url = URL(string: "\(Constants.baseURL)\(Constants.endpointTrendingMovie)\(Constants.apiKey)") else { return }
-        
-        executeRequest(url, TrendingMovies.self) { result in
+        executeRequest(url, Movies.self) { result in
             switch result {
             case .success(let results):
                 completion(.success(results.results))
@@ -35,20 +42,6 @@ class APICaller {
             }
         }
 
-    }
-    
-    func trendingTvs(completion: @escaping (Result<[Movie], Error>) -> Void) {
-        guard let url = URL(string: "\(Constants.baseURL)\(Constants.endpointTrendingTv)\(Constants.apiKey)") else { return }
-        
-        executeRequest(url, TrendingTvs.self) { result in
-            switch result {
-            case .success(let results):
-                completion(.success(results.results))
-            case .failure(let error):
-                completion(.failure(error))
-            }
-            
-        }
     }
     
     func executeRequest<T>(_ url: URL, _ decoder: T.Type, completion: @escaping (Result<T, APIError>) -> Void) where T: Decodable {
