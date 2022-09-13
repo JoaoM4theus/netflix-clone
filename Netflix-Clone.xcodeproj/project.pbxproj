@@ -18,6 +18,9 @@
 		DC44D4E728119916002A847E /* DownloadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC44D4E628119916002A847E /* DownloadViewController.swift */; };
 		DC48FD6B28330EEA004B43D0 /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC48FD6A28330EEA004B43D0 /* Box.swift */; };
 		DC68AEDC2824869C006C1527 /* HomeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC68AEDB2824869C006C1527 /* HomeHeaderView.swift */; };
+		DCB8B83A28D0BF830011F9CF /* ExtensionsString.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB8B83928D0BF830011F9CF /* ExtensionsString.swift */; };
+		DCB8B83C28D0C19C0011F9CF /* TrendingMovies.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB8B83B28D0C19C0011F9CF /* TrendingMovies.swift */; };
+		DCB8B83E28D0C1AC0011F9CF /* TrendingTvs.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB8B83D28D0C1AC0011F9CF /* TrendingTvs.swift */; };
 		DCD88E112823416E0045A235 /* CollectionViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD88E102823416E0045A235 /* CollectionViewTableViewCell.swift */; };
 		DCE82AD228CAB40B009D1395 /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE82AD128CAB40B009D1395 /* APICaller.swift */; };
 		DCE82AD428CABB13009D1395 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE82AD328CABB13009D1395 /* Movie.swift */; };
@@ -37,6 +40,9 @@
 		DC44D4E628119916002A847E /* DownloadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadViewController.swift; sourceTree = "<group>"; };
 		DC48FD6A28330EEA004B43D0 /* Box.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Box.swift; sourceTree = "<group>"; };
 		DC68AEDB2824869C006C1527 /* HomeHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeaderView.swift; sourceTree = "<group>"; };
+		DCB8B83928D0BF830011F9CF /* ExtensionsString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionsString.swift; sourceTree = "<group>"; };
+		DCB8B83B28D0C19C0011F9CF /* TrendingMovies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingMovies.swift; sourceTree = "<group>"; };
+		DCB8B83D28D0C1AC0011F9CF /* TrendingTvs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingTvs.swift; sourceTree = "<group>"; };
 		DCD88E102823416E0045A235 /* CollectionViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewTableViewCell.swift; sourceTree = "<group>"; };
 		DCE82AD128CAB40B009D1395 /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
 		DCE82AD328CABB13009D1395 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
@@ -149,6 +155,8 @@
 			isa = PBXGroup;
 			children = (
 				DCE82AD328CABB13009D1395 /* Movie.swift */,
+				DCB8B83B28D0C19C0011F9CF /* TrendingMovies.swift */,
+				DCB8B83D28D0C1AC0011F9CF /* TrendingTvs.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -157,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				DC48FD6A28330EEA004B43D0 /* Box.swift */,
+				DCB8B83928D0BF830011F9CF /* ExtensionsString.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -258,11 +267,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC44D4E5281198FD002A847E /* SearchViewController.swift in Sources */,
+				DCB8B83A28D0BF830011F9CF /* ExtensionsString.swift in Sources */,
 				DC44D4DE2811975B002A847E /* MainTabBarViewController.swift in Sources */,
 				DCE82AD428CABB13009D1395 /* Movie.swift in Sources */,
 				DCD88E112823416E0045A235 /* CollectionViewTableViewCell.swift in Sources */,
+				DCB8B83E28D0C1AC0011F9CF /* TrendingTvs.swift in Sources */,
 				DC68AEDC2824869C006C1527 /* HomeHeaderView.swift in Sources */,
 				DC2EBCAF2811942D009E8123 /* AppDelegate.swift in Sources */,
+				DCB8B83C28D0C19C0011F9CF /* TrendingMovies.swift in Sources */,
 				DC48FD6B28330EEA004B43D0 /* Box.swift in Sources */,
 				DC44D4E728119916002A847E /* DownloadViewController.swift in Sources */,
 				DC2EBCB12811942D009E8123 /* SceneDelegate.swift in Sources */,

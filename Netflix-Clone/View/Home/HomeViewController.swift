@@ -10,8 +10,8 @@ import UIKit
 class HomeViewController: UIViewController {
     
     let sectionsTitles: [String] = ["Trending Movies",
-                                    "Popular",
                                     "Trending Tv",
+                                    "Popular",
                                     "Upcoming Movies",
                                     "Top rated"]
     
@@ -27,7 +27,7 @@ class HomeViewController: UIViewController {
         view.backgroundColor = .systemBackground
         configureNavBar()
         setupHomeTableView()
-        trendingMovies()
+        trendingTvs()
     }
     
     override func viewDidLayoutSubviews() {
@@ -36,6 +36,12 @@ class HomeViewController: UIViewController {
     }
     
     private func trendingMovies() {
+        APICaller.shared.trendingMovies { trending in
+            print(trending)
+        }
+    }
+    
+    private func trendingTvs() {
         APICaller.shared.trendingMovies { trending in
             print(trending)
         }
@@ -103,7 +109,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
                                          width: 100,
                                          height: header.bounds.height)
         headerText?.textColor = .white
-        headerText?.text = headerText?.text?.lowercased().capitalized
+        headerText?.text = headerText?.text?.capitalizeFirstLetter()
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
