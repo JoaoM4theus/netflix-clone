@@ -17,25 +17,36 @@ class APICaller {
 
     static let shared = APICaller()
     
-    func trendingMovies(completion: @escaping (String) -> Void) {
+    func trendingMovies(completion: @escaping (Result<TrendingMoviesResponse, Error>) -> Void) {
         
         guard let url = URL(string: "\(Constants.baseURL)\(Constants.endpointTrending)\(Constants.apiKey)") else { return }
         
-        let task = URLSession.shared.dataTask(with: url) { data, response, error in
+        executeRequest(url, TrendingMoviesResponse.self) { result in
+            switch result {
+            case .success(let trending):
+                completion(.success(trending))
+            case .failure(let error):
+                completion(.failure(error))
+            }
+        }
+
+    }
+    
+    func executeRequest<T>(_ url: URL, _ decoder: T.Type, completion: @escaping (Result<T, Error>) -> Void) where T: Decodable {
+        
+        let _ = URLSession.shared.dataTask(with: url) { data, response, error in
             
             guard let data = data, error == nil else { return }
             
             do {
-                let result = try JSONSerialization.jsonObject(with: data, options: .fragmentsAllowed)
-                print(result)
+                let result = try JSONDecoder().decode(decoder, from: data)
+                completion(.success(result))
             } catch {
-                print(error.localizedDescription)
+                completion(.failure(error))
             }
-
             
-        }
+        }.resume()
         
-        task.resume()
     }
 
 }

@@ -36,8 +36,8 @@ class HomeViewController: UIViewController {
     }
     
     private func trendingMovies() {
-        APICaller.shared.trendingMovies { _ in
-            
+        APICaller.shared.trendingMovies { trending in
+            print(trending)
         }
     }
     

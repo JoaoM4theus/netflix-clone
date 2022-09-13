@@ -7,8 +7,12 @@
 
 import Foundation
 
+struct TrendingMoviesResponse: Decodable {
+    let results: [Movie]
+}
+
 struct Movie: Decodable {
-    let adult: Int?
+    let adult: Bool?
     let backdropPath: String?
     let genresIds: [Int]?
     let id: Int?
@@ -16,12 +20,12 @@ struct Movie: Decodable {
     let originalLanguage: String?
     let originalTitle: String?
     let overview: String?
-    let popularity: String?
+    let popularity: Double?
     let posterPath: String?
     let releaseDate: String?
     let title: String?
-    let video: Int?
-    let voteAverage: String?
+    let video: Bool?
+    let voteAverage: Double?
     let voteCount: Int?
     
     enum CodingKeys: String, CodingKey {
